@@ -1,0 +1,7 @@
+{
+    "window.title": "${activeEditorShort}${separator}${rootName} ${separator} [Branch: main]",
+    "workbench.colorCustomizations": {
+        "terminal.selectionBackground": "#fff",
+        "tree.indentGuidesStroke": "#008070"
+    }
+}
