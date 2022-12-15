@@ -9,8 +9,8 @@ export interface BlockData {
 const imageContainer = (block: BlockData) => {
   return (
     <>
-    <div className=" w-40">
-      <img src={block.imageUrl} alt="" className="rounded-sm h-full" />
+    <div className=" w-32 min-h-full drop-shadow-md">
+      <img src={block.imageUrl} alt="" className="rounded-sm w-full" />
     </div>
     </>
   );
@@ -19,10 +19,10 @@ const textContainer = (block: BlockData) => {
   return (
     <>
       <div className="description">
-        <div className="heading">{block.title}</div>
-        <div className="body">{block.bodyText}</div>
+        <div className="heading font-bold opacity-90">{block.title}</div>
+        <div className="body text-xs opacity-80">{block.bodyText}</div>
       </div>
-      <a className="button border rounded-sm border-black text-center py-3 text-sm" href="#vagaro">
+      <a className="button opacity-80 font-bold border rounded-sm border-black text-center py-3 text-sm" href="#vagaro">
         {block.linkText}
       </a>
     </>
@@ -50,7 +50,7 @@ const Block = (props: { blockData: BlockData }) => {
   const block = props.blockData;
   return (
     <>
-      <section className="flex mb-12">{block && contentContainer(block)}</section>
+      <section className="flex mb-12 min-h-160">{block && contentContainer(block)}</section>
     </>
   );
 };

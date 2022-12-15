@@ -3,96 +3,109 @@ import Layout from "../layouts/Layout.astro";
 import { Image, Picture } from "@astrojs/image/components";
 import test from "../images/test.png";
 import Block, { BlockData } from "../components/Block";
-import portrait from '../images/portrait.jpg'
-const bookingBlockData: BlockData = { 
-						imagePos: "left",
-						imageUrl: portrait.src, 
-						title: "Book With Alisha", 
-						bodyText: "Ready for a fresh new look? Book your appointment with me now and let's bring your hair vision to life. Click here to view my availability and schedule your service today.", 
-						linkUrl: '',
-						linkText: "Schedule Now!" 
-					};
+import portrait from "../images/portrait.jpg";
+import davines from "../images/davines.jpg";
+import waitlistrLogo from "../images/waitlistr-logo.png";
 
-const affiliateBlockData: BlockData = { 
-						imagePos: "right",
-						imageUrl: portrait.src, 
-						title: "Book Now", 
-						bodyText: "Upgrade your hair care routine with Davines, the premium Italian hair product line. Click here to purchase through our affiliate link and experience the difference for yourself.", 
-						linkUrl: '',
-						linkText: "Book Now!" 
-					};
+const bookingBlockData: BlockData = {
+  imagePos: "left",
+  imageUrl: portrait.src,
+  title: "Book With Alisha",
+  bodyText: "Ready for a fresh new look? Book your appointment with me now and let's bring your hair vision to life. Click here to view my availability and schedule your service today.",
+  linkUrl: "",
+  linkText: "Schedule Now!",
+};
+
+const affiliateBlockData: BlockData = {
+  imagePos: "right",
+  imageUrl: davines.src,
+  title: "Order & Ship Davines to your door",
+  bodyText: "Upgrade your hair care routine with Davines, the premium Italian hair product line committed to sustainability.",
+  linkUrl: "",
+  linkText: "Order today!",
+};
+
+const waitlistrBlockData: BlockData = {
+  imagePos: "left",
+  imageUrl: waitlistrLogo.src,
+  title: "New Client Waitlist",
+  bodyText: "I would love to work with you but I am currently booked up with projects 2-3 months in advance. Add yourself to my Waitlist so when I’m taking new clients, you won't miss out!",
+  linkUrl: "",
+  linkText: "Join to Waitlist!",
+};
 ---
 
 <Layout title="NAKA.STUDIO">
-  <main class="shadow-xl">
+  <main class="shadow-xl flex flex-1 flex-col">
     <div class="hero h-72 bg-hero bg-cover bg-center"></div>
     <div class="info-container">
-      <section class="info flex border-b border-stone-300 bg-brandGreen p-6">
+      <section class="info flex gap-8 border-b border-stone-300 bg-brandGreen p-6">
         <div class="name flex flex-col">
-          <div>Naka Studio</div>
+          <h1>Naka Studio</h1>
           <div class="opacity-80">@alishanakamura_hair</div>
         </div>
-        <div class="social-wrapper">
-          <div class="social tiktok"></div>
-          <div class="social mail"></div>
-          <div class="social instagram"></div>
+        <div class="social-wrapper items-center flex basis-1/2 justify-self-center justify-around">
+          <a href="" class="p-2 rounded  border border-transparent hover:border hover:border-slate-600 transition-all">
+            <div class="social-icon tiktok"></div>
+          </a>
+          <a href="" class="p-2 rounded border border-transparent hover:border hover:border-slate-600 transition-all">
+            <div class="social-icon instagram"></div>
+          </a>
+          <a href="" class="p-2 rounded border border-transparent hover:border hover:border-slate-600 transition-all">
+            <div class="social-icon linkedin"></div>
+          </a>
+          <a href="" class="p-2 rounded border border-transparent hover:border hover:border-slate-600 transition-all">
+            <div class="social-icon email"></div>
+          </a>
         </div>
       </section>
     </div>
     <section class="content h-full pt-4 px-6">
       <Block blockData={bookingBlockData} />
       <Block blockData={affiliateBlockData} />
-      <section class="waitlistr"></section>
+      <Block blockData={waitlistrBlockData} />
     </section>
   </main>
-  <footer class="bottom-0 width-screen absolute text-center">Created by</footer>
+  <footer class="bg-brandGreen text-center font-mono text-xs">website by SDA</footer>
 </Layout>
 
 <style>
   main {
-    @apply overflow-hidden  my-0 mx-auto;
-    width: 100vmin;
+    @apply my-0 mx-auto;
     max-width: 475px;
-    height: 100%;
   }
   .content {
     background: linear-gradient(rgb(187 247 208), rgb(220 252 231));
   }
   h1 {
-    @apply text-5xl;
+    @apply text-2xl;
     font-weight: 800;
     margin: 0;
   }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+
+  .social-icon {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
   }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
+
+  .tiktok {
+    background-image: url("../images/social-icons/tiktok-48.png");
   }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
+  .linkedin {
+    background-image: url("../images/social-icons/linkedin-48.png");
   }
-  .instructions strong {
-    color: rgb(var(--accent));
+  .email {
+    background-image: url("../images/social-icons/email-48.png");
   }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
+  .instagram {
+    background-image: url("../images/social-icons/instagram-48.png");
+  }
+
+  footer {
+	width: 100%;
+	max-width: 475px;
   }
 </style>
