@@ -9,20 +9,21 @@ export interface BlockData {
 const imageContainer = (block: BlockData) => {
   return (
     <>
-    <div className=" w-32 min-h-full drop-shadow-md">
-      <img src={block.imageUrl} alt="" className="rounded-sm w-full" />
-    </div>
+      <div className="w-32 h-40 drop-shadow-md overflow-hidden">
+        <img src={block.imageUrl} alt={`Picture for ${block.title}`} className="rounded-sm w-full h-full object-cover object-center" />
+      </div>
     </>
   );
 };
+
 const textContainer = (block: BlockData) => {
   return (
     <>
-      <div className="description">
-        <div className="heading font-bold opacity-90">{block.title}</div>
-        <div className="body text-xs opacity-80">{block.bodyText}</div>
+      <div className="block-body">
+        <div className="heading font-bold">{block.title}</div>
+        <div className="body text-xs opacity-90">{block.bodyText}</div>
       </div>
-      <a className="button opacity-80 font-bold border rounded-sm border-black text-center py-3 text-sm" href="#vagaro">
+      <a href={block.linkUrl} className="text-l button font-extrabold border shadow hover:shadow-inner rounded-sm border-black text-center py-3 text-sm">
         {block.linkText}
       </a>
     </>
@@ -50,7 +51,7 @@ const Block = (props: { blockData: BlockData }) => {
   const block = props.blockData;
   return (
     <>
-      <section className="flex mb-12 min-h-160">{block && contentContainer(block)}</section>
+      <section className="flex mb-12 min-h-160 p-5 shadow-md rounded border border-b">{block && contentContainer(block)}</section>
     </>
   );
 };

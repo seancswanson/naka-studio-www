@@ -11,9 +11,17 @@ module.exports = {
 			backgroundColor: {
 				brandGreen: "rgb(187 247 208)",
 				brandBlue: "#FDEBF7",
+				brandFloralWhite: "floralwhite",
 			},
 			minHeight: {
+				'50': '50px',
 				'160': '160px'
+			},
+			fontFamily: {
+				abuget: 'Abuget'
+			},
+			minWidth: {
+				'475': '475px'
 			}
 		},
 	},
