@@ -53,7 +53,7 @@ export default function SocialSection() {
   });
 
   return (
-    <div className="social-container social-icon-wrapper items-center flex flex-col basis-1/2">
+    <div className="social-container social-icon-wrapper items-center flex flex-col">
       <div className="social-icon-wrapper flex justify-self-center justify-around">{socialButtons}</div>
       <div className="ig-handle opacity-90">@alishanakamura.hair</div>
     </div>

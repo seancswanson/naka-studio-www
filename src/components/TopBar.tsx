@@ -5,7 +5,7 @@ export default function TopBar() {
     return (
       <>
         <div className="info-container">
-          <section className="info flex gap-12 border-b border-stone-300 p-6">
+          <section className="info flex justify-around border-b border-stone-300 p-6">
             <NameSection />
             <SocialSection />
           </section>

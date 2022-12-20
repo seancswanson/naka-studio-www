@@ -8,7 +8,7 @@ import tiktok from '../images/tiktok-edited.gif';
 
 export default function ContentBlocks() {
   const newClientBlockData: MiniBlockData = {
-    text: "Are You A New Client? Start Here",
+    text: "Are You A New Color Client? Start Here",
     linkUrl: "https://form.jotform.com/223496965831166",
   };
 

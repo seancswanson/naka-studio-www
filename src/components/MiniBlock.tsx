@@ -10,7 +10,7 @@ const contentContainer = (block: MiniBlockData) => {
       <div className="flex flex-1 justify-between items-center">
         {" "}
         {block.title && <span className="font-bold">{block.title}:</span>}
-        {block.text && <span className="font-bold">{block.text}</span>}
+        {block.text && <span className="font-bold text-lg">{block.text}</span>}
       </div>
       <div className="span">→</div>
     </>
