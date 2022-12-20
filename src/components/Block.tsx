@@ -1,6 +1,9 @@
+import Image from "@astrojs/image";
+
 export interface BlockData {
   imagePos: string;
-  imageUrl: string;
+  mediaUrl: string;
+  type?: string;
   title: string;
   bodyText: string;
   linkUrl: string;
@@ -10,7 +13,14 @@ const imageContainer = (block: BlockData) => {
   return (
     <>
       <div className="w-32 h-40 drop-shadow-md overflow-hidden">
-        <img src={block.imageUrl} alt={`Picture for ${block.title}`} className="rounded-sm w-full h-full object-cover object-center" />
+        {block.type === "video" ? (
+          <video className="rounded-sm w-full h-full object-cover object-center">
+            {" "}
+            <source src={block.mediaUrl} type="video/mp4" />
+          </video>
+        ) : (
+          <img src={block.mediaUrl} alt={`Picture for ${block.title}`} className="rounded-sm w-full h-full object-cover object-center" />
+        )}
       </div>
     </>
   );
