@@ -12,6 +12,7 @@ module.exports = {
 				brandGreen: "rgb(187 247 208)",
 				brandBlue: "#FDEBF7",
 				brandFloralWhite: "floralwhite",
+				brandWheat: "#a1843a26"
 			},
 			minHeight: {
 				'50': '50px',
