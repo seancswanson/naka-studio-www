@@ -1,9 +1,10 @@
 import Block, { BlockData } from "./Block";
 import MiniBlock, { MiniBlockData } from "./MiniBlock";
 import portrait from "../images/portrait.jpg";
+import portrait2 from "../images/portrait-2.jpg";
 import davines from "../images/davines.jpg";
 import waitlistrLogo from "../images/waitlistr-logo.png";
-import tiktok from '../images/tiktok.gif';
+import tiktok from '../images/tiktok-edited.gif';
 
 export default function ContentBlocks() {
   const newClientBlockData: MiniBlockData = {
@@ -13,7 +14,7 @@ export default function ContentBlocks() {
 
   const bookingBlockData: BlockData = {
     imagePos: "left",
-    mediaUrl: portrait.src,
+    mediaUrl: portrait2.src,
     title: "Book With Alisha",
     bodyText: "Ready for a fresh new look? Book your appointment with me now and let's bring your hair vision to life. Click here to view my availability and schedule your service today.",
     linkUrl:
