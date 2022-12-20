@@ -12,27 +12,31 @@ export default function SocialSection() {
       url: "https://www.tiktok.com/@alishanakamura.hair",
       class: "tiktok",
       iconUrl: "../src/images/icons/tiktok-48.png",
+      iconSrc: tiktok.src,
     },
     {
       url: "https://www.instagram.com/alishanakamura.hair",
       class: "instagram",
       iconUrl: "../src/images/icons/instagram-48.png",
+      iconSrc: instagram.src,
     },
     {
       url: "https://www.linkedin.com/in/alisha-nakamura-60532125b/",
       class: "linkedin",
       iconUrl: "../src/images/icons/linkedin-48.png",
+      iconSrc: linkedin.src,
     },
     {
       url: "mailto:alishanakamura+www@protonmail.com",
       class: "email",
       iconUrl: "../src/images/icons/email-48.png",
+      iconSrc: email.src,
     },
   ];
 
   const socialButtons = socialAccounts.map((socialAccount, index) => {
     const socialIconStyle = {
-      backgroundImage: `url(${socialAccount.iconUrl})`,
+      backgroundImage: `url(${socialAccount.iconSrc})`,
       backgroundPosition: "center",
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
