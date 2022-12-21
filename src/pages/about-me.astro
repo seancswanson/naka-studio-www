@@ -4,6 +4,9 @@ import TopBar from "../components/TopBar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import AboutMePicture from "../components/aboutMePicture";
+
+import sig from '../../src/images/sig.png';
+import hey from '../../src/images/hey.png';
 ---
 
 <Layout title="NAKA.STUDIO | About Me">
@@ -13,13 +16,13 @@ import AboutMePicture from "../components/aboutMePicture";
     <section class="content h-full pt-8 px-4 text-lg">
       <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative bottom-3">←</a>
 
-      <h1 class="mb-7">Hey there! 👋</h1>
+      <span class="flex gap-4 text-4xl items-center mb-4"><img src={hey.src} class="w-1/2">👋</span>
 
       <p class="mb-7">Welcome to my new website! My name is Alisha Nakamura and I am a hairstylist, hair educator, and mentor of over 6 years, most of which spent at an upscale salon in down Seattle, WA where I have worked for the past 6 years.</p>
 
       <AboutMePicture id={0} />
 
-      <p class="mb-7">In addition to providing a wide range of hair styling services to my clients, I have also had the opportunity to train and mentor apprentices in the industry.</p>\
+      <p class="mb-7">In addition to providing a wide range of hair styling services to my clients, I have also had the opportunity to train and mentor apprentices in the industry.</p>
 
       <p class="mb-7">
         I am passionate about being a hairstylist because I truly love making people happy. There is something special about taking care of our physical appearance that helps us feel respected and dignified, and I am dedicated to helping my clients
@@ -42,7 +45,11 @@ import AboutMePicture from "../components/aboutMePicture";
         I have a wide range of skills and experience in the beauty industry, and I am confident in my ability to provide exceptional service to every client. Thank you for considering me as your stylist, and I look forward to the opportunity to work
         with you and help you feel your best!
       </p>
+      
+      <img src={sig.src} alt="" class="w-3/4">
+      
       <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative top-3">←</a>
+
     </section>
   </main>
   <Footer />
