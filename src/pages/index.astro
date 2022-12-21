@@ -4,6 +4,10 @@ import TopBar from "../components/TopBar";
 import ContentBlocks from "../components/ContentBlocks";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
+import { Umami } from 'astro-analytics';
+
+const UMAMI_ID = import.meta.env.PUBLIC_UMAMI;
+console.log(UMAMI_ID)
 ---
 
 <Layout title="NAKA.STUDIO">
@@ -15,6 +19,7 @@ import Footer from "../components/Footer";
     </section>
   </main>
   <Footer />
+  <Umami dataId={UMAMI_ID} site="www.nakastudio.com" host="" />
 </Layout>
 
 <style>
