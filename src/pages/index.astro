@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import { Umami } from 'astro-analytics';
 
-const UMAMI_ID = import.meta.env.PUBLIC_UMAMI;
+const UMAMI_ID = import.meta.env.PUBLIC_ENVIRONMENT === 'PROD' ? import.meta.env.PUBLIC_UMAMI : 0;
 console.log(UMAMI_ID)
 ---
 
@@ -19,7 +19,6 @@ console.log(UMAMI_ID)
     </section>
   </main>
   <Footer />
-  <Umami dataId={UMAMI_ID} site="naka.studio" host="/umami.js" />
 </Layout>
 
 <style>
