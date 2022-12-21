@@ -46,7 +46,7 @@ export default function SocialSection() {
     return (
       <>
         <a href={socialAccount.url} target="_blank" rel="noreferrer"  className="p-2 rounded border border-transparent hover:border hover:border-slate-600 transition-all">
-          <div style={socialIconStyle}></div>
+          <div key={index} style={socialIconStyle}></div>
         </a>
       </>
     );

@@ -1,20 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image, Picture } from "@astrojs/image/components";
 import TopBar from "../components/TopBar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import ContentBlocks from "../components/ContentBlocks";
+import aboutMe1 from "../images/about-me-1.jpg";
+import aboutMe2 from "../images/about-me-2.jpg";
+
+const imageProps = {
+  src: aboutMe1.src,
+  width: 400,
+  height: 300,
+};
 ---
 
 <Layout title="NAKA.STUDIO | About Me">
   <main class="shadow-xl min-w-475 flex flex-1 flex-col bg-brandFloralWhite">
     <Hero />
     <TopBar />
-    <section class="content h-full pt-8 px-6">
-    <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative bottom-3">←</a>
-      <h1 class="mb-7">Hey there!</h1>
-      <p class="mb-7">Welcome to my new website! My name is Alisha Namakura and I am a hairstylist, hair educator, and mentor of over 6 years, most of which spent at an upscale salon in down Seattle, WA where I have worked for the past 6 years. In addition to providing a wide range of hair styling services to my clients, I have also had the opportunity to train and mentor apprentices in the industry.</p>
-       <p class="mb-7">
+    <section class="content h-full pt-8 px-4 text-lg">
+      <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative bottom-3">←</a>
+
+      <h1 class="mb-7">Hey there! 👋</h1>
+      <p class="mb-7">Welcome to my new website! My name is Alisha Nakamura and I am a hairstylist, hair educator, and mentor of over 6 years, most of which spent at an upscale salon in down Seattle, WA where I have worked for the past 6 years.</p>
+      <div class="bg-shiftUp shadow rounded inline-block w-56 float-right bg-aboutMe2 bg-cover bg-top h-72 ml-6 my-4"></div>
+
+      <p class="mb-7">In addition to providing a wide range of hair styling services to my clients, I have also had the opportunity to train and mentor apprentices in the industry.</p>
+      <p class="mb-7">
         I am passionate about being a hairstylist because I truly love making people happy. There is something special about taking care of our physical appearance that helps us feel respected and dignified, and I am dedicated to helping my clients
         achieve the look they desire.
       </p>
@@ -23,14 +36,18 @@ import ContentBlocks from "../components/ContentBlocks";
         Growing up in Japan, where salons are a common sight on every block, has had a significant impact on my approach to styling. The Japanese place a strong emphasis on being well-groomed and presentable at all times, and this focus on perfection
         has definitely rubbed off on me as a stylist. I am not satisfied until my pursuit of technical precision leads to my clients' happiness and satisfaction.
       </p>
+      <div class="bg-shiftUpSm shadow rounded inline-block w-56 float-left bg-aboutMe1 bg-cover bg-top h-72 mr-6 my-2"></div>
 
       <p class="mb-7">
-As a hair educator and mentor, I am committed to sharing my knowledge and experience with the next generation of stylists. I believe that it is important to give back to the industry and help those who are just starting out on their own journey as hairstylists.      </p>
+        As a hair educator and mentor, I am committed to sharing my knowledge and experience with the next generation of stylists. I believe that it is important to give back to the industry and help those who are just starting out on their own
+        journey as hairstylists.
+      </p>
 
       <p class="mb-7">
         I have a wide range of skills and experience in the beauty industry, and I am confident in my ability to provide exceptional service to every client. Thank you for considering me as your stylist, and I look forward to the opportunity to work
         with you and help you feel your best!
       </p>
+      <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative top-3">←</a>
     </section>
   </main>
   <Footer />

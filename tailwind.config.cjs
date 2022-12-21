@@ -3,10 +3,15 @@ module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				'spaceMono': "'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace"
+			},
 			backgroundImage: {
 				hero: "url('/src/images/naka-salon-placeholder.png')",
 				portrait: "url('/src/images/portrait.jpg')",
 				davines: "url('/src/images/davines.jpg')",
+				aboutMe1: "url('/src/images/about-me-1.jpg')",
+				aboutMe2: "url('/src/images/about-me-2.jpg')"
 			},
 			backgroundColor: {
 				brandGreen: "rgb(187 247 208)",
@@ -23,6 +28,10 @@ module.exports = {
 			},
 			minWidth: {
 				'475': '475px'
+			},
+			backgroundPosition: {
+				shiftUp: "0px -40px",
+				shiftUpSm: "0px -10px"
 			}
 		},
 	},
