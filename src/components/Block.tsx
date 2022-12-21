@@ -33,7 +33,7 @@ const textContainer = (block: BlockData) => {
         <div className="heading font-bold">{block.title}</div>
         <div className="body text-xs opacity-90">{block.bodyText}</div>
       </div>
-      <a href={block.linkUrl} className="text-l button font-extrabold border shadow hover:shadow-inner rounded-sm border-black text-center py-3 text-sm">
+      <a href={block.linkUrl} className="text-l button font-bold border shadow hover:shadow-inner rounded-sm border-black text-center py-3 text-sm">
         {block.linkText}
       </a>
     </>
