@@ -1,17 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import TopBar from "../components/TopBar";
-import ContentBlocks from "../components/ContentBlocks";
-import Hero from "../components/Hero";
-import Footer from "../components/Footer";
-import { Umami } from 'astro-analytics';
-
-const UMAMI_ID = import.meta.env.PUBLIC_ENVIRONMENT === 'PROD' ? import.meta.env.PUBLIC_UMAMI : 0;
-console.log(UMAMI_ID)
+import TopBar from "../components/TopBar.astro";
+import ContentBlocks from "../components/ContentBlocks.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="NAKA.STUDIO">
-  <main class="shadow min-w-475 flex flex-1 flex-col bg-brandFloralWhite">
+  <main class="shadow shadow-skinShadow/40 min-w-475 flex flex-1 flex-col bg-brandFloralWhite">
     <Hero />
     <TopBar />
     <section class="content h-full pt-8 px-6">
@@ -26,15 +22,10 @@ console.log(UMAMI_ID)
     @apply my-0 mx-auto;
     max-width: 475px;
   }
-  .content {
-  }
+
   h1 {
     @apply text-2xl;
     font-weight: 800;
     margin: 0;
-  }
-  Footer {
-    width: 100%;
-    max-width: 475px;
   }
 </style>

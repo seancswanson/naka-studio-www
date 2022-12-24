@@ -1,26 +1,28 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
-import TopBar from "../components/TopBar";
-import Hero from "../components/Hero";
-import Footer from "../components/Footer";
-import AboutMePicture from "../components/aboutMePicture";
+import TopBar from "../components/TopBar.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
 
-import sig from '../../src/images/sig.png';
-import hey from '../../src/images/hey.png';
+import aboutMe1 from "../images/about-me/about-me-1.png";
+import aboutMe2 from "../images/about-me/about-me-2.png";
+import sig from "../images/about-me/sig.png";
+import hey from "../images/about-me/hey.png";
 ---
 
 <Layout title="NAKA.STUDIO | About Me">
-  <main class="shadow-xl min-w-475 flex flex-1 flex-col bg-brandFloralWhite">
+  <main class="shadow shadow-skinShadow/40 min-w-475 flex flex-1 flex-col bg-brandFloralWhite">
     <Hero />
     <TopBar />
-    <section class="content h-full pt-8 px-4 text-lg">
+    <section class="content h-full py-8 px-6 text-lg">
       <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative bottom-3">←</a>
 
-      <span class="flex gap-4 text-4xl items-center mb-4"><img src={hey.src} class="w-1/2">👋</span>
+      <span class="flex gap-4 text-4xl items-center mb-4"><Image src={hey} alt="Image of a handwritten greeting." class="w-1/2" />👋</span>
 
       <p class="mb-7">Welcome to my new website! My name is Alisha Nakamura and I am a hairstylist, hair educator, and mentor of over 6 years, most of which spent at an upscale salon in down Seattle, WA where I have worked for the past 6 years.</p>
 
-      <AboutMePicture id={0} />
+      <Image src={aboutMe1} alt="Portrait of Alisha Nakamura" class="shadow shadow-skinShadow/40 rounded inline-block w-56 float-right h-72 ml-6 my-4 object-cover" />
 
       <p class="mb-7">In addition to providing a wide range of hair styling services to my clients, I have also had the opportunity to train and mentor apprentices in the industry.</p>
 
@@ -34,7 +36,7 @@ import hey from '../../src/images/hey.png';
         has definitely rubbed off on me as a stylist. I am not satisfied until my pursuit of technical precision leads to my clients' happiness and satisfaction.
       </p>
 
-      <AboutMePicture id={1} />
+      <Image src={aboutMe2} alt="Portrait of Alisha Nakamura" class="shadow shadow-skinShadow/40 rounded inline-block w-56 float-left h-72 mr-6 my-2 object-cover" />
 
       <p class="mb-7">
         As a hair educator and mentor, I am committed to sharing my knowledge and experience with the next generation of stylists. I believe that it is important to give back to the industry and help those who are just starting out on their own
@@ -45,11 +47,10 @@ import hey from '../../src/images/hey.png';
         I have a wide range of skills and experience in the beauty industry, and I am confident in my ability to provide exceptional service to every client. Thank you for considering me as your stylist, and I look forward to the opportunity to work
         with you and help you feel your best!
       </p>
-      
-      <img src={sig.src} alt="" class="w-3/4">
-      
-      <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative top-3">←</a>
 
+      <Image src={sig} alt="Image of a handwritten signature" class="w-3/4" />
+
+      <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative top-3">←</a>
     </section>
   </main>
   <Footer />
