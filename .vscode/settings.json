@@ -3,5 +3,11 @@
     "workbench.colorCustomizations": {
         "terminal.selectionBackground": "#fff",
         "tree.indentGuidesStroke": "#008070"
-    }
+    },
+    "cSpell.words": [
+        "astro",
+        "Consolas",
+        "Menlo",
+        "tailwindcss"
+    ]
 }

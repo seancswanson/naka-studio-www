@@ -23,27 +23,20 @@ const { title } = Astro.props;
     <script async defer src="https://analytics.umami.is/script.js" data-website-id="598535a6-3e29-424c-a3fc-75d0f0e744ca"></script>
     <title>{title}</title>
   </head>
-  <body class="flex flex-col justify-between items-center bg-skin-accent">
+  <body class="flex flex-col bg-blend-overlay justify-between items-center bg-skin-accent h-screen font-skinDisplay">
     <slot />
   </body>
 </html>
 <style is:global>
   :root {
-    --color-text-base: ;
-    --color-text-muted: ;
-    --color-text-inverted: ;
-    --color-bg-base: 'floralwhite';
+    --font-family-skin-display: 'Lora';
+    --color-bg-base: #fffaf0;
     --color-bg-accent: #F4F0E6;                 
 	  --color-shadow: 135 103 123;
   }
-  html {
-    @apply font-sans;
-    font-family: "Lora";
-  }
+
   body {
-    @apply h-screen;
-  }
-  code {
-    font-family: "Space Mono", Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    background-image: url('../images/cactus-2.png');
+    background-size: 160px;
   }
 </style>

@@ -7,25 +7,12 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="NAKA.STUDIO">
-  <main class="shadow shadow-skinShadow/40 min-w-475 flex flex-1 flex-col bg-brandFloralWhite">
+  <main class="shadow shadow-skinShadow/40 min-w-475 flex flex-1 flex-col bg-skin-base my-0 mx-auto">
     <Hero />
     <TopBar />
-    <section class="content h-full pt-8 px-6">
+    <section class="content h-full pt-8 px-6 max-w-475">
       <ContentBlocks />
     </section>
   </main>
   <Footer />
 </Layout>
-
-<style>
-  main {
-    @apply my-0 mx-auto;
-    max-width: 475px;
-  }
-
-  h1 {
-    @apply text-2xl;
-    font-weight: 800;
-    margin: 0;
-  }
-</style>
