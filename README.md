@@ -1,4 +1,4 @@
-# project_title
+# naka.studio
 
 A microsite developed for a hair stylist in Seattle, WA using Astro and Tailwind, hosted on Vercel.
 
@@ -7,9 +7,9 @@ A microsite developed for a hair stylist in Seattle, WA using Astro and Tailwind
 - Most obviously the Web Big 3:
   - HTML, CSS, JavaScript
 - [Astro](https://www.astro.com/)
-  - I used Astro for its powerful set of design tools and customizable templates, which made it easy to create a visually appealing and professional-looking website. I also made use of the Tailwind configuration options to create a cohesive design system intertwined with CSS variables that I can override easily in the future for similar projects.
+  - I used Astro for its powerful development experience and rich plugins and integrations ecosystem, which made it easy to create a visually appealing and professional-looking website. 
 - [Tailwind](https://www.tailwindcss.com/)
-  - Tailwind's utility-first CSS framework allowed us to quickly and easily style our website, and its responsive design made it look great on all devices.
+  - Tailwind's utility-first CSS framework allowed us to quickly and easily style our website, and its responsive design made it look great on all devices. I also made use of the Tailwind configuration options to create a cohesive design system intertwined with CSS variables that I can override easily in the future for similar projects.
 - [Vercel](https://vercel.com/)
   - I chose Vercel as our hosting platform for its ease of use and fast deployment times. Its global edge network also ensures that our website loads quickly for users all around the world.
 

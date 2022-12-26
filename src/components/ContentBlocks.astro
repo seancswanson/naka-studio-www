@@ -1,13 +1,13 @@
 ---
 import Block, { BlockData } from "./Block.astro";
 import MiniBlock, { MiniBlockData } from "./MiniBlock.astro";
-import portrait from "../images/home/portrait.jpg";
-import davines from "../images/home/davines.jpg";
-import waitlistrLogo from "../images/home/waitlistr-logo.png";
+import portrait from "../images/home/portrait.webp";
+import davines from "../images/home/davines.webp";
+import waitlistrLogo from "../images/home/waitlistr-logo.webp";
 import tiktok from "../images/home/tiktok-clipped-resize.mp4";
 
 const newClientBlockData: MiniBlockData = {
-  text: "Are You A New Color Client? Start Here",
+  text: "Are You A New Client? Start Here",
   linkUrl: "https://form.jotform.com/223496965831166",
 };
 
@@ -51,6 +51,10 @@ const waitlistrBlockData: BlockData = {
 ---
 
 <MiniBlock blockData={newClientBlockData} />
+<p class="mb-3 px-2 font-bold">Due to the transition to my new salon, all bookings will be manually reviewed and priority will be given to returning clients.</p>
+<p class="mb-3 px-2 font-bold">If you are a new client, please submit the <a href="https://form.jotform.com/223496965831166" style="font-variant:small-caps;" class=" border-b border-black">new color client form</a> before booking to ensure availability.</p>
+<p class="mb-3 px-2 font-bold">For all other inquiries, please contact me by email.</p>
+<p class="mb-6 px-2 font-bold">Thank you for your support and patience as I go on this new adventure!</p>
 <Block blockData={bookingBlockData} />
 <Block blockData={affiliateBlockData} />
 <Block blockData={aboutMeBlockData} />

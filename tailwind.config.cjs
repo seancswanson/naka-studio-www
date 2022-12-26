@@ -7,14 +7,21 @@ module.exports = {
 				skinShadow: 'rgb(var(--color-shadow) / <alpha-value>)'
 			},
 			fontFamily: {
-				skinDisplay: 'var(--font-family-skin-display)',
-				skinMono: "'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace"
+				skinDisplay: 'var(--font-family-skin-display), serif',
+				skinMono: "'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",
+
 			},
 			backgroundColor: {
 				skin: {
 					base: 'var(--color-bg-base)',
 					accent: 'var(--color-bg-accent)',
 				}
+			},
+			backgroundImage: {
+				skinPattern: 'var(--bg-image-skin-pattern)'
+			},
+			backgroundSize: {
+                skinPattern: 'var(--bg-image-skin-pattern-size)'
 			},
 			minHeight: {
 				'50': '50px',
@@ -31,7 +38,7 @@ module.exports = {
 				skin: {
 					base: 'var(--color-base)',
 				}
-			},
+			}
 		},
 	},
 	plugins: [],
