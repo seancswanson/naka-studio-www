@@ -10,11 +10,10 @@ const { blockData } = Astro.props;
 ---
 
 <section class="flex mb-8 min-h-50 border shadow shadow-skinShadow/40 hover:shadow-inner rounded-sm border-black">
-  <a href={blockData.linkUrl} class="flex flex-1 button opacity-80 font-bold px-5 rounded-sm text-center text-xl items-center justify-between">
+  <a href={blockData.linkUrl} class="flex flex-1 button opacity-80 font-bold px-5 rounded-sm text-center items-center justify-between">
     <div class="flex flex-1 justify-between items-center">
-      {" "}
       {blockData.title && <span class="font-bold">{blockData.title}:</span>}
-      {blockData.text && <span class="font-bold text-lg">{blockData.text}</span>}
+      {blockData.text && <span class="font-bold text-base sm:text-lg">{blockData.text}</span>}
     </div>
     <div class="span">→</div>
   </a>
