@@ -4,6 +4,7 @@ import {Image} from "@astrojs/image/components";
 export interface BlockData {
   mediaPos: string;
   media: ImageMetadata | string;
+  mediaAlt?: string;
   type?: string;
   title: string;
   bodyText: string;
@@ -19,6 +20,7 @@ const { blockData } = Astro.props;
         {
           blockData.type === "video" ? (
             <video class="rounded-sm w-full h-full object-cover object-center" autoplay muted loop>
+              <source src={blockData.mediaAlt} type="video/webm" />
               <source src={blockData.media} type="video/mp4" />
             </video>
           ) : (

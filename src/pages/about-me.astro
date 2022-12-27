@@ -1,9 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
-import TopBar from "../components/TopBar.astro";
-import Hero from "../components/Hero.astro";
-import Footer from "../components/Footer.astro";
 
 import aboutMe1 from "../images/about-me/about-me-1.webp";
 import aboutMe2 from "../images/about-me/about-me-2.webp";
@@ -13,8 +10,6 @@ import hey from "../images/about-me/hey.png";
 
 <Layout title="NAKA.STUDIO | About Me">
   <main class="shadow shadow-skinShadow/40 min-w-475 flex flex-1 flex-col bg-skin-base">
-    <Hero />
-    <TopBar />
     <section class="content h-full py-8 px-6 text-lg">
       <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative bottom-3">←</a>
 
@@ -53,7 +48,6 @@ import hey from "../images/about-me/hey.png";
       <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative top-3">←</a>
     </section>
   </main>
-  <Footer />
 </Layout>
 
 <style>
