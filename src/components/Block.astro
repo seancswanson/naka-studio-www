@@ -16,7 +16,6 @@ const { blockData } = Astro.props;
 ---
 
 <section class:list={[{ 'flex-row-reverse': blockData.mediaPos === "right" }, "flex mb-8 min-h-160 p-3 sm:p-5  shadow-md shadow-skinShadow/40 rounded border border-b gap-6"]}>
-    <div class="w-32 h-full shrink-0 shadow-sm shadow-skinShadow/40">
         {
           blockData.type === "video" ? (
             <video class="rounded-sm w-full h-full object-cover object-center" autoplay muted loop>
@@ -24,10 +23,9 @@ const { blockData } = Astro.props;
               <source src={blockData.media} type="video/mp4" />
             </video>
           ) : (
-            <Image src={blockData.media} alt={`Picture for ${blockData.title}`} class="rounded-sm w-full h-full object-cover object-center" />
+            <Image src={blockData.media} alt={`Picture for ${blockData.title}`} class="w-32 min-h-160 shrink-0 shadow-sm shadow-skinShadow/40 rounded-sm  object-cover object-center"/>
           )
         }
-      </div>
 
   <div class="flex flex-col justify-between">
     <div class="blockData-body mb-2ß">
