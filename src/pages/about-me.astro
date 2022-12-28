@@ -1,6 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
+import Emoji from "../components/Emoji.astro";
 
 import aboutMe1 from "../images/about-me/about-me-1.webp";
 import aboutMe2 from "../images/about-me/about-me-2.webp";
@@ -13,7 +14,7 @@ import hey from "../images/about-me/hey.png";
     <section class="content h-full py-8 px-6 text-lg">
       <a href="/" class="text-3xl p-2 border border-transparent hover:border hover:border-slate-600 transition-all rounded-sm mb-4 relative bottom-3">←</a>
 
-      <span class="flex gap-4 text-4xl items-center mb-4"><Image src={hey} alt="Image of a handwritten greeting." class="w-1/2" />👋</span>
+      <span class="flex gap-4 text-4xl items-center mb-4"><Image src={hey} alt="Image of a handwritten greeting." class="w-1/2" /><Emoji symbol="👋" label="wave" /></span>
 
       <p class="mb-7">Welcome to my new website! My name is Alisha Nakamura and I am a hairstylist, hair educator, and mentor of over 6 years, most of which spent at an upscale salon in down Seattle, WA where I have worked for the past 6 years.</p>
 
