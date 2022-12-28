@@ -16,7 +16,7 @@ const { blockData } = Astro.props;
 ---
 
 <section class:list={[{ 'flex-row-reverse': blockData.mediaPos === "right" }, "flex mb-8 min-h-160 p-3 sm:p-5  shadow-md shadow-skinShadow/40 rounded border border-b gap-6"]}>
-    <div class="w-32 h-40 shrink-0 shadow-sm shadow-skinShadow/40">
+    <div class="w-32 h-full shrink-0 shadow-sm shadow-skinShadow/40">
         {
           blockData.type === "video" ? (
             <video class="rounded-sm w-full h-full object-cover object-center" autoplay muted loop>
