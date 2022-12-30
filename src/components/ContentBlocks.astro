@@ -5,7 +5,7 @@ import portrait from "../images/home/portrait.webp";
 import davines from "../images/home/davines.webp";
 import waitlistrLogo from "../images/home/waitlistr-logo.webp";
 import tiktok from "../images/home/tiktok-clipped-resize.mp4";
-import tiktokWebm from "../images/home/tiktok-webm.webm";
+import tiktokWebm from "../images/home/tiktok-resize.webm";
 
 const newClientBlockData: MiniBlockData = {
   text: "Are You A New Client? Start Here",
@@ -53,14 +53,17 @@ const waitlistrBlockData: BlockData = {
 ---
 
 <MiniBlock blockData={newClientBlockData} />
-<p class="mb-3 px-2 font-bold">Due to the transition to my new salon, all bookings will be manually reviewed and priority will be given to returning clients.</p>
-<p class="mb-3 px-2 font-bold">
-  If you are a new client, please submit the
-  <a href="https://form.jotform.com/223496965831166" style="font-variant:small-caps;" class="border-b border-black">new client form</a>
+<p class="mb-5 px-2">* Due to the transition to my new salon, all bookings will be manually reviewed and priority will be given to returning clients.</p>
+<p class="mb-5 px-2">
+  <span class=" font-bold">New Clients:</span> Please submit the
+  <a href="https://form.jotform.com/223496965831166" style="font-variant:small-caps;" class="font-bold border-b border-black">new client form</a>
   before booking to ensure availability.
 </p>
-<p class="mb-3 px-2 font-bold">For all other inquiries, please contact me by email.</p>
-<p class="mb-6 px-2 font-bold">Thank you for your support and patience as I go on this new adventure!</p>
+<p class="mb-5 px-2">
+  <span class=" font-bold">Returning Clients:</span> Please <a href="https://form.jotform.com/223496965831166" style="font-variant:small-caps;" class="font-bold border-b border-black">email me</a> and I will work with you to figure out the best options for scheduling! 
+</p>
+<p class="mb-3 px-2">For all other inquiries, please contact me by email.</p>
+<p class="mb-6 px-2 ">Thank you for your support and patience as I go on this new adventure!</p>
 <Block blockData={bookingBlockData} />
 <Block blockData={affiliateBlockData} />
 <Block blockData={aboutMeBlockData} />

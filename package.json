@@ -19,6 +19,7 @@
     "@types/react-dom": "^18.0.9",
     "astro": "^1.6.15",
     "astro-analytics": "^2.5.1",
+    "astro-compress": "github:astro-community/astro-compress#animated",
     "cssnano": "^5.1.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

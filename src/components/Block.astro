@@ -1,5 +1,5 @@
 ---
-import {Image} from "@astrojs/image/components";
+import { Image } from "@astrojs/image/components";
 
 export interface BlockData {
   mediaPos: string;
@@ -15,24 +15,24 @@ export interface BlockData {
 const { blockData } = Astro.props;
 ---
 
-<section class:list={[{ 'flex-row-reverse': blockData.mediaPos === "right" }, "flex mb-8 min-h-160 p-3 sm:p-5  shadow-md shadow-skinShadow/40 rounded border border-b gap-6"]}>
-        {
-          blockData.type === "video" ? (
-            <video class="rounded-sm w-32 min-h-160 object-cover object-center" autoplay muted loop>
-              <source src={blockData.mediaAlt} type="video/webm" />
-              <source src={blockData.media} type="video/mp4" />
-            </video>
-          ) : (
-            <Image src={blockData.media} alt={`Picture for ${blockData.title}`} class="w-32 min-h-160 shrink-0 shadow-sm shadow-skinShadow/40 rounded-sm  object-cover object-center"/>
-          )
-        }
+<section class:list={[{ "flex-row-reverse": blockData.mediaPos === "right" }, "flex mb-8 min-h-160 p-3 sm:p-5  shadow-md shadow-skinShadow/40 rounded border border-b gap-6"]}>
+  {
+    blockData.type === "video" ? (
+      <video class="rounded-sm w-32 min-h-160 object-cover object-center shadow-sm shadow-skinShadow/40 rounded-sm" playsinline autoplay muted loop>
+        <source src={blockData.mediaAlt} type="video/webm" />
+        <source src={blockData.media} type="video/mp4" />
+      </video>
+    ) : (
+      <Image src={blockData.media} alt={`Picture for ${blockData.title}`} class="w-32 min-h-160 object-cover object-center shadow-sm shadow-skinShadow/40 rounded-sm" />
+    )
+  }
 
   <div class="flex flex-col justify-between">
     <div class="blockData-body mb-4">
       <div class="heading font-bold">{blockData.title}</div>
       <div class="body text-xs opacity-90">{blockData.bodyText}</div>
     </div>
-    <a href={blockData.linkUrl} class="text-l button font-bold border shadow shadow-skinShadow/40 hover:shadow-inner rounded-sm border-black text-center py-3 text-sm">
+    <a href={blockData.linkUrl} target="_blank" class="text-l button font-bold border shadow shadow-skinShadow/40 hover:shadow-inner rounded-sm border-black text-center py-3 text-sm">
       {blockData.linkText}
     </a>
   </div>
