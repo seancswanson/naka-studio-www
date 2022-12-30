@@ -45,7 +45,7 @@ const socialAccounts = [
           height: "20px",
         };
         return (
-          <a href={item.url} target="_blank" rel={`${item.class === 'email' ? 'noreferrer' : ''}`} class="p-2 rounded border border-transparent hover:border hover:border-slate-600 transition-all">
+          <a href={item.url} target="_blank" rel={`${item.class === 'email' ? 'author' : 'noreferrer'}`} class="p-2 rounded border border-transparent hover:border hover:border-slate-600 transition-all">
             <div style={socialIconStyle} />
           </a>
         );

@@ -13,10 +13,13 @@ import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
+import prefetch from "@astrojs/prefetch";
+
+// https://astro.build/config
 import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://naka.studio',
-  integrations: [image(), tailwind(), react(), sitemap(), compress()]
+  integrations: [image(), tailwind(), react(), prefetch(), sitemap(), compress()]
 });

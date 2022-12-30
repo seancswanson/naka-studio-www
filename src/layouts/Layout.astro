@@ -1,8 +1,12 @@
 ---
-import "@fontsource/lora";
+import { SEO } from "astro-seo";
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import TopBar from "../components/TopBar.astro";
+import portrait from "../images/home/portrait.webp";
+
 export interface Props {
   title: string;
 }
@@ -13,33 +17,56 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <SEO
+      title="Naka Studio | Now Open!"
+      description="Welcome to Naka Studio! Alisha Nakamura's full-service hair salon is located in Seattle and offers a range of services including haircuts, coloring, styling, and more. Alisha Nakamura is dedicated to providing you with the best possible service and helping you achieve the look you desire. Visit us today and let us help you feel and look your best!"
+      openGraph={{
+        basic: {
+          title: "Naka Studio | Homepage",
+          type: "website",
+          image: portrait.src,
+          url: "https://naka.studio",
+        },
+        image: { alt: "Portrait of Alisha Nakamura" },
+      }}
+      twitter={{
+        creator: "@sean_sonofswan",
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content: portrait.src,
+          },
+          { name: "twitter:title", content: "Naka Studio | Now Open!" },
+          { name: "twitter:description", content: "Agent" },
+        ],
+      }}
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital@1&display=swap"
-      rel="stylesheet"
-    />
+    <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital@1&display=swap" />
     <meta name="generator" content={Astro.generator} />
     <script async defer src="https://analytics.umami.is/script.js" data-website-id="598535a6-3e29-424c-a3fc-75d0f0e744ca"></script>
     <title>{title}</title>
   </head>
- <body class="flex flex-col bg-blend-darken bg-skinPattern justify-between items-center bg-skin-accent h-screen font-skinDisplay">
+  <body class="flex flex-col bg-blend-darken bg-skinPattern justify-between items-center bg-skin-accent h-screen font-skinDisplay">
     <Hero />
     <TopBar />
-    <slot/>
+    <slot />
     <Footer />
-  </body>
+  </body><style is:global>
+    :root {
+      --font-family-skin-display: "Lora";
+      --color-bg-base: #fffaf0;
+      --color-bg-accent: #f4f0e6;
+      --color-shadow: 135 103 123;
+      --bg-image-skin-pattern: url("../images/cactus-seamless.webp");
+      --bg-image-skin-pattern-size: 250px;
+    }
+  </style>
 </html>
-<style is:global>
-  :root {
-    --font-family-skin-display: 'Lora';
-    --color-bg-base: #fffaf0;
-    --color-bg-accent: #F4F0E6;                 
-	  --color-shadow: 135 103 123;
-    --bg-image-skin-pattern: url('../images/cactus-seamless.webp');
-    --bg-image-skin-pattern-size: 250px;
-  }
-</style>

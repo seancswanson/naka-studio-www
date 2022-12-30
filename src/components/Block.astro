@@ -32,7 +32,7 @@ const { blockData } = Astro.props;
       <div class="heading font-bold">{blockData.title}</div>
       <div class="body text-xs opacity-90">{blockData.bodyText}</div>
     </div>
-    <a href={blockData.linkUrl} target="_blank" class="text-l button font-bold border shadow shadow-skinShadow/40 hover:shadow-inner rounded-sm border-black text-center py-3 text-sm">
+    <a href={blockData.linkUrl} rel={`${blockData.linkUrl === '/about-me' ? 'prefetch' : ''}`} target="_blank" class="text-l button font-bold border shadow shadow-skinShadow/40 hover:shadow-inner rounded-sm border-black text-center py-3 text-sm">
       {blockData.linkText}
     </a>
   </div>
