@@ -3,7 +3,7 @@ import davines from "../images/home/davines.webp";
 import portrait from "../images/home/portrait.webp";
 import tiktok from "../images/home/tiktok-clipped-resize.mp4";
 import tiktokWebm from "../images/home/tiktok-resize.webm";
-import waitlistrLogo from "../images/home/waitlistr-logo.webp";
+import vagaro from "../images/home/vagaro.webp";
 import Block, { BlockData } from "./Block.astro";
 
 const bookingBlockData: BlockData = {
@@ -38,16 +38,17 @@ const aboutMeBlockData: BlockData = {
   linkText: "Get To Know Me",
 };
 
-const waitlistrBlockData: BlockData = {
-  mediaPos: "left",
-  media: waitlistrLogo,
-  title: "New Client Waitlist",
-  bodyText: "Add yourself to my Waitlist so when I’m taking new clients, you won't miss out!",
-  linkUrl: "",
-  linkText: "Join the Waitlist",
+const servicesBlockData: BlockData = {
+  mediaPos: "right",
+  media: vagaro,
+  title: "Services & Prices",
+  bodyText: "Before your service, take a look at my offerings and starting prices.",
+  linkUrl: "/services",
+  linkText: "View Services",
 };
 ---
 
 <Block blockData={bookingBlockData} />
 <Block blockData={affiliateBlockData} />
 <Block blockData={aboutMeBlockData} />
+<Block blockData={servicesBlockData} />

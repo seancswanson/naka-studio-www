@@ -1,0 +1,19 @@
+---
+export interface serviceData {
+  name?: string;
+  price?: string;
+  description?: string;
+  duration?: string;
+}
+
+const { serviceData } = Astro.props;
+---
+
+<div class="flex flex-col gap-2 mb-8 shadow shadow-skinShadow/40 px-4 py-6 border border-[rgba(0,0,0,0.2)] bg-[rgba(255,255,255,.2)]">
+  <div class="flex justify-between items-center">
+    <h3 class="font-bold">{serviceData.name}</h3>
+    <p class="text-sm italic">{serviceData.price}</p>
+  </div>
+  <p class="self-end text-xs italic">{serviceData.duration} minutes</p>
+  <p>{serviceData.description}</p>
+</div>

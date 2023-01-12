@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Service from "../components/Service.astro";
+const haircutServices = [
+  {
+    name: "Haircut",
+    price: "$150.00",
+    description: "A customized haircut designed by your stylist to fit your individual style and preferences.",
+    duration: "90",
+  },
+];
+
+const colorServices = [
+  {
+    name: "Single Process (Roots to Ends)",
+    price: "Starting at $230.00",
+    description:
+      "This service is for clients wanting a one dimensional color whether that is to cover greys, darken or lighten. It is ideal for first time clients wanting to aim for one solid lighter shade. Service includes color, toner, a shampoo and blowdry.",
+    duration: "120",
+  },
+  {
+    name: "All over color (Root Maintenance)",
+    price: "Starting at $110.00",
+    description:
+      "This service is designed for someone looking to cover new growth.  If your new growth is longer than 1.5 inches please book a Single Process service. This service is the only service that does not automatically include a blowout. Select a blowout as an add on service.",
+    duration: "60",
+  },
+  {
+    name: "Traditonal Full Balayage",
+    price: "$350.00",
+    description:
+      "Balayage is a hair coloring technique using a clay lightener that creates a natural, graduated look. It is often chosen by clients who want a more relaxed and sun-kissed appearance. This can also be booked by clients who are dark and are wanting deep, chocolate tones. This particular service addresses the entire head. Service includes highlights, toner, a shampoo and blowdry.",
+    duration: "180",
+  },
+  {
+    name: "Traditional Partial Balayage",
+    price: "$300.00",
+    description:
+      "Balayage is a hair coloring technique using a clay lightener that creates a natural, graduated look. It is often chosen by clients who want a more relaxed and sun-kissed appearance. This can also be booked by clients who are dark and are wanting deep, chocolate tones. This particular service addresses the front and top back of the head. Service includes highlights, toner, a shampoo and blowdry.",
+    duration: "165",
+  },
+  {
+    name: "Hairline Highlights",
+    price: "Starting at $250.00",
+    description: "This service addresses the entire hairline. This is a great maintenance service for those loving their current color but want to refresh their brightness. Service includes highlights, toner, a shampoo and blowdry.",
+    duration: "120",
+  },
+  {
+    name: "Modern Partial Foil",
+    price: "Starting at $350.00",
+    description:
+      "A modern balayage is a highlighting service that can incorporate multiple techniques to achieve your customized color. A partial service addresses everything but the lower back of the head. This is a great dimensional service for maintaining your highlights and adding brightness around the face. Service includes highlights, toner, a shampoo and blowdry.",
+    duration: "210",
+  },
+  {
+    name: "Modern Full Foil",
+    price: "Starting at $450.00",
+    description:
+      "A modern balayage is a highlighting service that can incorporate multiple lightening techniques to achieve your customized color. A full service addresses the entire head. This is a great dimensional service for going lighter overall and creating brightness throughout the hair. Service includes highlights, toner, a shampoo and blowdry.",
+    duration: "270",
+  },
+  {
+    name: "Transformative Color",
+    price: "Starting at $650.00",
+    description:
+      "A Transformative Color service is a service that lasts 5+ hours. This can be going from dark to light, a complete tonal shift or a color correction from previous color work. This service is based on an hourly charge that will include protective treatments and any extra color or care needed to produce the final outcome. Haircut is not included in this service but can be added on.",
+    duration: "300",
+  },
+];
+---
+
+<Layout title="NAKA.STUDIO">
+  <main class="shadow shadow-skinShadow/40 max-w-475 w-full flex flex-1 flex-col bg-skin-base my-0 mx-auto">
+    <section class="content h-full p-6 max-w-475">
+      <h1 class="underline text-3xl text-center mb-8">Services and Prices</h1>
+      <p class="italic text-center mb-8">*All prices are starting points.</p>
+      <h2 class="text-2xl mb-8 text-center border border-slate-700">Haircut and Other</h2>
+      <div class="flex flex-col gap-2">
+        {
+          haircutServices.map((item) => {
+            return <Service serviceData={item} />;
+          })
+        }
+      </div>
+      <h2 class="text-2xl mb-8 text-center border border-slate-700">Color</h2>
+      <div class="flex flex-col gap-2">
+        {
+          colorServices.map((item) => {
+            return <Service serviceData={item} />;
+          })
+        }
+      </div>
+    </section>
+    <p class="italic text-center mb-8 px-4">*Additional charges may apply depending on volume of product and add-ons.</p>
+  </main>
+</Layout>
