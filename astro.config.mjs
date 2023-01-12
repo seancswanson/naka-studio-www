@@ -19,7 +19,10 @@ import prefetch from "@astrojs/prefetch";
 import compress from "astro-compress";
 
 // https://astro.build/config
+import robotsTxt from "astro-robots-txt";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://naka.studio',
-  integrations: [image(), tailwind(), react(), prefetch(), sitemap(), compress()]
+  integrations: [image(), tailwind(), react(), prefetch(), sitemap(), robotsTxt(), compress()]
 });
