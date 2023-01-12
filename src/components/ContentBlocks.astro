@@ -1,25 +1,21 @@
 ---
-import Block, { BlockData } from "./Block.astro";
-import MiniBlock, { MiniBlockData } from "./MiniBlock.astro";
-import portrait from "../images/home/portrait.webp";
 import davines from "../images/home/davines.webp";
-import waitlistrLogo from "../images/home/waitlistr-logo.webp";
+import portrait from "../images/home/portrait.webp";
 import tiktok from "../images/home/tiktok-clipped-resize.mp4";
 import tiktokWebm from "../images/home/tiktok-resize.webm";
-
-const newClientBlockData: MiniBlockData = {
-  text: "Are You A New Client? Start Here",
-  linkUrl: "https://form.jotform.com/223496965831166",
-};
+import waitlistrLogo from "../images/home/waitlistr-logo.webp";
+import Block, { BlockData } from "./Block.astro";
 
 const bookingBlockData: BlockData = {
   mediaPos: "left",
   media: portrait,
   title: "Book With Alisha",
-  bodyText: "Ready for a fresh new look? Book your appointment with me now and let's bring your hair vision to life. Click here to view my availability and schedule your service today.",
-  linkUrl:
-    "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVLhDeHmL54q4iUQyZ7p7J3QcXu3kxU4jI16W0WHGVJeVQVjNBpvfgQXfdYXSs7AaF0ClWT3PX8zKuwTqey4gMGtiXD+huCMk1+dqlwIzNGCXFh397kd57bs3/9O0IcP/o8GnBBgJyWTd3YJMM27SGbujrk1s/xvnBqZdbL8gSIxBxVfhY/dgk6mo2Soyk3mxQ+p2mgPagfF1FO6r/hCTEa2JeCJxGnbu+/1iWZz7iBvMahaIopWvM/LZ0/IkKzfoMj5TH5m+/kkDUxNlNhXvuh7rO+QI517YYqy494+QU/s4T/CVq+Du8fyqGSKMxuM/MX/nIMEkf6OhFyXpxzBy+SsQnzoR0rH/awFi1Yrm0jbz&c_type=tab",
-  linkText: "Schedule Now",
+  // bodyText: "Ready for a fresh new look? Book your appointment with me now and let's bring your hair vision to life. Click here to view my availability and schedule your service today.",
+  bodyText: "Due to the transition to my new salon, all bookings will be manually reviewed and priority will be given to returning clients. Click here to view the best way to get on my books.",
+  // linkUrl:
+  //   "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVLhDeHmL54q4iUQyZ7p7J3QcXu3kxU4jI16W0WHGVJeVQVjNBpvfgQXfdYXSs7AaF0ClWT3PX8zKuwTqey4gMGtiXD+huCMk1+dqlwIzNGCXFh397kd57bs3/9O0IcP/o8GnBBgJyWTd3YJMM27SGbujrk1s/xvnBqZdbL8gSIxBxVfhY/dgk6mo2Soyk3mxQ+p2mgPagfF1FO6r/hCTEa2JeCJxGnbu+/1iWZz7iBvMahaIopWvM/LZ0/IkKzfoMj5TH5m+/kkDUxNlNhXvuh7rO+QI517YYqy494+QU/s4T/CVq+Du8fyqGSKMxuM/MX/nIMEkf6OhFyXpxzBy+SsQnzoR0rH/awFi1Yrm0jbz&c_type=tab",
+  linkUrl: "/book",
+  linkText: "How to Book",
 };
 
 const affiliateBlockData: BlockData = {
@@ -27,7 +23,7 @@ const affiliateBlockData: BlockData = {
   media: davines,
   title: "Order Davines To Your Door",
   bodyText: "Upgrade your hair care routine with Davines, the premium Italian hair product line committed to sustainability.",
-  linkUrl: "https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVLhDeHmL54q4iUQyZ7p7J3QcXu3kxU4jI16W0WHGVJeVQVjNBpvfgQXfdYXSs7AaF0ClWT3PX8zKuwTqey4gMGtiXD+huCMk1+dqlwIzNGCXFh397kd57bs3/9O0IcP/o8GnBBgJyWTd3YJMM27SGbujrk1s/xvnBqZdbL8gSIxBxVfhY/dgk6mo2Soyk3mxQ+p2mgPagfF1FO6r/hCTEa2JeCJxGnbu+/1iWZz7iBvMahaIopWvM/LZ0/IkKzfoMj5TH5m+/kkDUxNlNhXvuh7rO+QI517YYqy494+QU/s4T/CVq+Du8fyqGSKMxuM/MX/nIMEkf6OhFyXpxzBy+SsQnzoR0rH/awFi1Yrm0jbz&c_type=tab",
+  linkUrl: "https://shop.saloninteractive.com/store/NakaStudio?utm_source=SalonInteractive&utm_medium=web&utm_campaign=ShareMyStore",
   linkText: "Order Today",
 };
 
@@ -52,18 +48,6 @@ const waitlistrBlockData: BlockData = {
 };
 ---
 
-<MiniBlock blockData={newClientBlockData} />
-<p class="mb-5 px-2">* Due to the transition to my new salon, all bookings will be manually reviewed and priority will be given to returning clients.</p>
-<p class="mb-5 px-2">
-  <span class=" font-bold">New Clients:</span> Please submit the
-  <a href="https://form.jotform.com/223496965831166" style="font-variant:small-caps;" class="font-bold border-b border-black">new client form</a>
-  before booking to ensure availability.
-</p>
-<p class="mb-5 px-2">
-  <span class=" font-bold">Returning Clients:</span> Please <a href="https://form.jotform.com/223496965831166" style="font-variant:small-caps;" class="font-bold border-b border-black">email me</a> and I will work with you to figure out the best options for scheduling! 
-</p>
-<p class="mb-3 px-2">For all other inquiries, please contact me by email.</p>
-<p class="mb-6 px-2 ">Thank you for your support and patience as I go on this new adventure!</p>
 <Block blockData={bookingBlockData} />
 <Block blockData={affiliateBlockData} />
 <Block blockData={aboutMeBlockData} />
