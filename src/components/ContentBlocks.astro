@@ -5,6 +5,7 @@ import tiktok from "../images/home/tiktok-clipped-resize.mp4";
 import tiktokWebm from "../images/home/tiktok-resize.webm";
 import vagaro from "../images/home/vagaro.webp";
 import Block, { BlockData } from "./Block.astro";
+import HalfHalfBlock from "./HalfHalfBlock.astro";
 
 const bookingBlockData: BlockData = {
   mediaPos: "left",
@@ -51,4 +52,5 @@ const servicesBlockData: BlockData = {
 <Block blockData={bookingBlockData} />
 <Block blockData={affiliateBlockData} />
 <Block blockData={aboutMeBlockData} />
-<Block blockData={servicesBlockData} />
+<!-- <Block blockData={servicesBlockData} /> -->
+<HalfHalfBlock />
