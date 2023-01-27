@@ -1,8 +1,8 @@
 ---
-import tiktok from "../images/icons/tiktok-48.webp";
-import linkedin from "../images/icons/linkedin-48.webp";
 import email from "../images/icons/email-48.webp";
 import instagram from "../images/icons/instagram-48.webp";
+import linkedin from "../images/icons/linkedin-48.webp";
+import tiktok from "../images/icons/tiktok-48.webp";
 
 const socialAccounts = [
   {
@@ -24,7 +24,7 @@ const socialAccounts = [
     iconSrc: linkedin.src,
   },
   {
-    url: "mailto:alishanakamura+www@proton.me",
+    url: "mailto:alishanakamura@proton.me",
     class: "email",
     iconUrl: "../src/images/icons/email-48.png",
     iconSrc: email.src,
@@ -45,7 +45,7 @@ const socialAccounts = [
           height: "20px",
         };
         return (
-          <a href={item.url} aria-label={`Go to ${item.class}`} target="_blank" rel={`${item.class === 'email' ? 'author' : 'noreferrer'}`} class="p-2 rounded border border-transparent hover:border hover:border-slate-600 transition-all">
+          <a href={item.url} aria-label={`Go to ${item.class}`} target="_blank" rel={`${item.class === "email" ? "author" : "noreferrer"}`} class="p-2 rounded border border-transparent hover:border hover:border-slate-600 transition-all">
             <div style={socialIconStyle} />
           </a>
         );
